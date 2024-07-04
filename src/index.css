@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Poppins";
+  background-color: #f3f3f3;
+}
+:where(.css-dev-only-do-not-override-zl9ks2).ant-rate .ant-rate-star-first,
+:where(.css-dev-only-do-not-override-zl9ks2).ant-rate .ant-rate-star-second {
+  color: #cbd5e1;
+  padding: 2px 4px;
+  border: 2px solid #cbd5e1 !important;
+  border-radius: 4px;
+  background: white;
+}
+:where(.css-dev-only-do-not-override-zl9ks2).ant-rate
+  .ant-rate-star-half
+  .ant-rate-star-first,
+:where(.css-dev-only-do-not-override-zl9ks2).ant-rate
+  .ant-rate-star-full
+  .ant-rate-star-second {
+    border : 2px solid #60a5fa;
+    color: #60a5fa;
+}
+:where(.css-dev-only-do-not-override-1k979oh).ant-rate .ant-rate-star-second{
+  color: #94a3b8;
+}
+.raise{
+  animation: raise 0.5s ease-out forwards;
+}
+@keyframes raise {
+  from{
+      width: 0rem;
+  }
+  to{
+      /* width: auto; */
+  }
+}
+
+.ant-table-row.ant-table-row-level-1{
+  background-color: #f1f5f9;
+}
+/* .ant-table-row-expand-icon.ant-table-row-expand-icon-collapsed,
+.ant-table-row-expand-icon.ant-table-row-expand-icon-expanded{
+  position: absolute;
+  right: 0;
+} */
+/* :where(.css-dev-only-do-not-override-1k979oh).ant-table-wrapper .ant-table-cell, :where(.css-dev-only-do-not-override-1k979oh).ant-table-wrapper .ant-table-thead>tr>th, :where(.css-dev-only-do-not-override-1k979oh).ant-table-wrapper .ant-table-tbody>tr>th, :where(.css-dev-only-do-not-override-1k979oh).ant-table-wrapper .ant-table-tbody>tr>td, :where(.css-dev-only-do-not-override-1k979oh).ant-table-wrapper tfoot>tr>th, :where(.css-dev-only-do-not-override-1k979oh).ant-table-wrapper tfoot>tr>td{
+  position: unset;
+}
+.ant-table-cell{
+  text-align: start;
+} */
+.no-scrollbar::-webkit-scrollbar{
+  display: none;
+}
