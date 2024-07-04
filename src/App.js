@@ -23,10 +23,10 @@ import UserPay from "./pages/User/UserPay";
 import AdminUserView from "./pages/Admin/AdminUserView";
 import AdminReview from "./pages/Admin/AdminReview";
 import AdminProject from "./pages/Admin/AdminProject";
-import ResetPassword from './pages/ResetPassword';
+import ResetPassword from "./pages/ResetPassword";
 
 function App() {
-  const userRole = useSelector((state) => state.user.user?.role || 'Guest');
+  const userRole = useSelector((state) => state.user.user?.role || "Guest");
   useUserUtility();
 
   return (
@@ -41,7 +41,7 @@ function App() {
         <Route
           path="/admin/dashboard"
           element={
-            <ProtectedRoute userRole={userRole} requiredRoles={["Admin"]}>
+            <ProtectedRoute userRole={userRole} requiredRoles={["admin"]}>
               <AdminDashboard />
             </ProtectedRoute>
           }
@@ -49,7 +49,7 @@ function App() {
         <Route
           path="/admin/user-view"
           element={
-            <ProtectedRoute userRole={userRole} requiredRoles={["Admin"]}>
+            <ProtectedRoute userRole={userRole} requiredRoles={["admin"]}>
               <AdminUserView />
             </ProtectedRoute>
           }
@@ -57,15 +57,15 @@ function App() {
         <Route
           path="/admin/review"
           element={
-            <ProtectedRoute userRole={userRole} requiredRoles={["Admin"]}>
+            <ProtectedRoute userRole={userRole} requiredRoles={["admin"]}>
               <AdminReview />
             </ProtectedRoute>
           }
         />
-          <Route
+        <Route
           path="/admin/project"
           element={
-            <ProtectedRoute userRole={userRole} requiredRoles={["Admin"]}>
+            <ProtectedRoute userRole={userRole} requiredRoles={["admin"]}>
               <AdminProject />
             </ProtectedRoute>
           }
@@ -85,7 +85,7 @@ function App() {
         <Route
           path={`/admin/goal`}
           element={
-            <ProtectedRoute userRole={userRole} requiredRoles={["Admin"]}>
+            <ProtectedRoute userRole={userRole} requiredRoles={["admin"]}>
               <GoalDashboardAdmin />
             </ProtectedRoute>
           }
@@ -167,7 +167,7 @@ function App() {
         <Route
           path={`/admin/pay`}
           element={
-            <ProtectedRoute userRole={userRole} requiredRoles={["Admin"]}>
+            <ProtectedRoute userRole={userRole} requiredRoles={["admin"]}>
               <AdminPay />
             </ProtectedRoute>
           }
