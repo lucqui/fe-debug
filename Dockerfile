@@ -16,5 +16,6 @@ COPY conf /etc/nginx
 # Copy React build artifacts
 COPY --from=builder /app/build /usr/share/nginx/html
 
+EXPOSE 80
 # Run the script before starting Nginx
 CMD ["/bin/sh", "-c", " nginx -g 'daemon off;'"]
